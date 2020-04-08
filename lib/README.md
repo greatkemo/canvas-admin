@@ -1,1 +1,1 @@
-This directory holds the libraries need for the canvas admin scripts.
+This directory holds the libraries needed for the canvas admin scripts.
