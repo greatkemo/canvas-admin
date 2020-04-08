@@ -1,0 +1,48 @@
+#this function was borrowed from a Red Hat project 
+#this displays the progress of each item when the script is running.
+
+function print_header {
+  if [[ $# -gt 0 ]]; then
+    echo "\n${@}\n"
+  fi
+}
+
+function print_line {
+  echo "${@}"
+}
+
+function pad {
+  local text="$1"
+  local dots='...............................................................'
+  printf '%s%s  ' "${text}" "${dots:${#text}}"
+}
+
+function print_FAIL {
+  [[ $# -gt 0 ]] && echo -n "$@ "
+  __print_status FAIL 31
+  let fail_count++
+  return 0
+}
+
+function print_PASS {
+  [[ $# -gt 0 ]] && echo -n "$@ "
+  __print_status PASS 32
+  let pass_count++
+  return 0
+}
+
+function print_SUCCESS {
+  [[ $# -gt 0 ]] && echo -n "$@ "
+  __print_status SUCCESS 36
+  let success_count++
+  return 0
+}
+
+function __print_status {
+  local text="${1}" color="${2}"
+  if [[ $# -eq 2 ]]; then
+    echo "[ \\033[1;${color}m${text}\\033[0;39m ]"
+  else
+    echo 'FIXME ERROR print_status wrong number of arguments'
+  fi
+}
