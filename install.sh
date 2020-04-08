@@ -193,9 +193,7 @@ function canvas_ldap_setup() {
         * ) echo "Please answer [Y] for yes or [n] for no:";;
     esac
   done
-
 }
-
 
 function install_canvas_admin() {
   #copy canvas-admin to /usr/local directory create symlink and permissions
@@ -217,7 +215,6 @@ function main() {
   install_canvas_admin
   canvas_api_setup
   canvas_ldap_setup
-
 }
 
 # main script
