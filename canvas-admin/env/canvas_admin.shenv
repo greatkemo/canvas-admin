@@ -1,13 +1,10 @@
-#canvas-admin required variables
-CANVAS_API_URL='https://{canvas_url}/api/v1'
-CANVAS_ACCESS_TOKEN=${canvas_token}
+#fix canvas-admin required variables
 CANVAS_ADMIN_PATH="/usr/local/canvas-admin"
-CANVAS_ADMIN_ENV="${canvas_admin_path}/env"
-CANVAS_ADMIN_BIN="${canvas_admin_path}/bin"
-CANVAS_ADMIN_LIB{canvas_admin_path}/lib
-CANVAS_ADMIN_LOGS="${canvas_admin_path}/log"
-CANVAS_ADMIN_TMP="${canvas_admin_path}/tmp"
+CANVAS_ADMIN_ENV="/usr/local/canvas-admin/env"
+CANVAS_ADMIN_BIN="/usr/local/canvas-admin/bin"
+CANVAS_ADMIN_LIB="/usr/local/canvas-admin/lib
+CANVAS_ADMIN_LOGS="/usr/local/canvas-admin/log"
+CANVAS_ADMIN_TMP="/usr/local/canvas-admin/tmp"
 
-#company ldap required variables
-COMPANY_LDAP_HOST="${ldap_hostmae}" #e.g. ldap.company.com
-COMPANY_LDAP_BASE="${ldap_search_base}" #e.g.ou=staff,dc=company,dc=com
+#will be added after the install script runs
+
